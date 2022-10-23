@@ -96,7 +96,6 @@ export default function Example() {
                           id="pool-type"
                           name="pool-type"
                           className="block w-full p-4 bg-transparent text-white rounded-md border border-[#01FAC3] shadow-lg focus:border-[#01FAC3] ring-slate-500 focus:ring-[#01FAC3] sm:text-xl"
-                          defaultValue="Electromagnetic"
                           value={poolType}
                           onChange={(e) => setPoolType(e.target.value)}
                         >

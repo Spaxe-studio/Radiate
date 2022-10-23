@@ -59,7 +59,7 @@ export default function Home() {
   return (
     <main className="lg:relative bg-transparent">
       {/* hero */}
-      <div className="mx-auto w-full max-w-7xl pt-16 pb-20 text-center lg:py-48 lg:text-left">
+      <div className="mx-auto w-full max-w-7xl pt-16 pb-10 sm:pb-20 text-center lg:py-48 lg:text-left">
         <div className="px-4 sm:px-8 lg:w-1/2 xl:pr-16">
           <h1 className="text-4xl font-black tracking-widest text-white sm:text-5xl md:text-6xl lg:text-5xl xl:text-7xl">
             Radiate
@@ -81,7 +81,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="relative h-64 w-full sm:h-72 md:h-96 lg:absolute lg:inset-y-8 lg:right-0 lg:w-1/2">
+      <div className="relative mb-10 sm:mb-0 h-64 w-full sm:h-72 md:h-96 lg:absolute lg:inset-y-8 lg:right-0 lg:w-1/2">
         <Image
           className="absolute inset-0 h-full w-full object-cover"
           src={heroImage}

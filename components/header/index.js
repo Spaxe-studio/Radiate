@@ -3,12 +3,14 @@ import Link from "next/link";
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { useRouter } from "next/router";
 
 const navigation = [
   { name: "Home", href: "/" },
   { name: "Stake", href: "/stake" },
 ];
 export default function Header() {
+  const router = useRouter();
   return (
     <Popover>
       <div className="mx-auto max-w-7xl p-4 sm:p-6">
@@ -34,7 +36,11 @@ export default function Header() {
           <div className="hidden md:flex md:space-x-10">
             {navigation.map((item) => (
               <Link key={item.name} href={item.href}>
-                <a className="font-light text-white hover:font-black">
+                <a
+                  className={` text-white hover:font-black ${
+                    router.pathname == item.href ? "font-black" : "font-light"
+                  }`}
+                >
                   {item.name}
                 </a>
               </Link>
@@ -46,7 +52,7 @@ export default function Header() {
                 href="#"
                 className="inline-flex items-center rounded-md border border-white px-4 py-2 text-base font-medium text-white hover:bg-gray"
               >
-                Connect Wallect
+                Connect Wallet
               </a>
             </span>
           </div>
@@ -70,7 +76,7 @@ export default function Header() {
             <div className="flex items-center justify-between px-5 pt-4">
               <div>
                 <Link href="/">
-                  <a className="font-black tracking-widest text-white">
+                  <a className="font-black tracking-widest text-black sm:text-white">
                     RADIATE
                   </a>
                 </Link>
@@ -84,20 +90,19 @@ export default function Header() {
             </div>
             <div className="px-2 pt-2 pb-3">
               {navigation.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900"
-                >
-                  {item.name}
-                </a>
+                <Link key={item.name} href={item.href}>
+                  <a className="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900">
+                    {item.name}
+                  </a>
+                </Link>
               ))}
             </div>
+
             <a
               href="#"
-              className="block w-full bg-gray-50 px-5 py-3 text-center font-medium text-indigo-600 hover:bg-gray-100"
+              className="block w-full bg-gray-50 px-5 py-3 text-center font-medium text-black border border-black hover:bg-gray-100"
             >
-              Connect Wallect
+              Connect Wallet
             </a>
           </div>
         </Popover.Panel>

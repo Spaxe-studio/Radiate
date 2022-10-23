@@ -8,21 +8,26 @@ export default function Footer() {
           RADIATE
         </h2>
         <div className="mt-8 flex items-center justify-center">
-          <Link href="/">
-            <a className="border-r hover:bg-white hover:text-black border-white text-white tracking-widest text-lg p-4">
-              Telegram
-            </a>
-          </Link>
-          <Link href="/">
-            <a className="border-r border-white hover:bg-white hover:text-black text-white tracking-widest text-lg p-4">
-              Twitter
-            </a>
-          </Link>
-          <Link href="/">
-            <a className=" text-white hover:bg-white hover:text-black tracking-widest text-lg p-4">
-              Chart
-            </a>
-          </Link>
+          <a
+            href="https://www.T.me/RadiateToken "
+            className="border-r hover:bg-white hover:text-black border-white text-white tracking-widest text-lg p-4"
+          >
+            Telegram
+          </a>
+
+          <a
+            href="https://www.twitter.com/RadiateToken"
+            className="border-r border-white hover:bg-white hover:text-black text-white tracking-widest text-lg p-4"
+          >
+            Twitter
+          </a>
+
+          <a
+            href="/"
+            className=" text-white hover:bg-white hover:text-black tracking-widest text-lg p-4"
+          >
+            Chart
+          </a>
         </div>
 
         <p className="mt-8 text-center font-normal text-base text-white">
