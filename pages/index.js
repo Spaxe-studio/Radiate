@@ -81,7 +81,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="relative h-64 w-full sm:h-72 md:h-96 lg:absolute lg:inset-y-8 lg:right-0 lg:h-full lg:w-1/2">
+      <div className="relative h-64 w-full sm:h-72 md:h-96 lg:absolute lg:inset-y-8 lg:right-0 lg:w-1/2">
         <Image
           className="absolute inset-0 h-full w-full object-cover"
           src={heroImage}
