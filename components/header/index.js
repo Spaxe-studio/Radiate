@@ -33,13 +33,11 @@ export default function Header() {
           </div>
           <div className="hidden md:flex md:space-x-10">
             {navigation.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="font-light text-white hover:font-black"
-              >
-                {item.name}
-              </a>
+              <Link key={item.name} href={item.href}>
+                <a className="font-light text-white hover:font-black">
+                  {item.name}
+                </a>
+              </Link>
             ))}
           </div>
           <div className="hidden md:absolute md:inset-y-0 md:right-0 md:flex md:items-center md:justify-end">
