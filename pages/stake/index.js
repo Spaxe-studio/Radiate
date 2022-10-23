@@ -119,9 +119,11 @@ export default function Example() {
                         <label htmlFor="range" className="sr-only">
                           Range
                         </label>
-                        <span className="flex mb-4 justify-between text-white">
-                          <h4>0%</h4>
-                          <h4>100%</h4>
+                        <span className="flex mb-4 justify-between items-center text-white">
+                          <h4>Range</h4>
+                          <span className="px-6 py-2 w-24 justify-self-end text-center bg-gradient-to-r from-green-400 to-blue-500  font-bold rounded-full text-white">
+                            {range}
+                          </span>
                         </span>
                         <input
                           type="range"
@@ -134,11 +136,9 @@ export default function Example() {
                           value={range}
                           onChange={(e) => setRange(e.target.value)}
                         />
-                        <span className="flex mt-4 justify-between items-center text-white">
-                          <h4>Range</h4>
-                          <span className="px-6 py-2 w-24 justify-self-end text-center bg-gradient-to-r from-green-400 to-blue-500  font-bold rounded-full text-white">
-                            {range}
-                          </span>
+                        <span className="flex mt-4 justify-between text-white">
+                          <h4>0%</h4>
+                          <h4>100%</h4>
                         </span>
                       </div>
 
